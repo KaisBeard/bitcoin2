@@ -1,6 +1,8 @@
 import './App.css';
 import React from "react";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import axios from "axios";
+import Coin from "./Coin";
 
 function App() {
   const [coins, setCoins] = useState ([])
@@ -15,10 +17,37 @@ useEffect(() => {
   
   return (
     <div className="App">
-      <header className="App-header">
-        
-      </header>
+      <div className="coin-search">
+      <h1 className="coin-text">Kryptowährung suchen</h1>
+      <form>
+        <input type="text" placeholder="Suche Kryptowährung" className='coin-input'/>
+      </form>
+    </div>
+    
 
+
+
+
+
+
+
+
+
+
+    {filteredCoins}.map(coin => {
+      return (
+        <Coin 
+        key={coin.id} 
+        name={coin.name} 
+        image={coin.image}
+        symbol={coin.symbol}
+        volume={coin.market_cap}
+        price={coin.current_price}
+        priceChange={coin.price_change_percentage_24h}
+        marketcap={coin.total_volume}
+        />
+      );
+    })
     </div>
   );
 }
