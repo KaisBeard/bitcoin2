@@ -3,13 +3,15 @@ import React from "react";
 import {useState, useEffect} from "react";
 import axios from "axios";
 
-function App() {
-  const [coins, setCoins] = useState ([])
+function currencyDescription(currencyName) {
+  const [currencyData, setCurrencyData] = useState ([])
+
+  const currencyUrl ="https://api.coingecko.com/api/v3/coins/";
 
 useEffect(() => {
-  axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=EUR&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+  axios.get(`${currencyUrl}${currencyName}`)
   .then(res =>
-    {setCoins(res.data);
+    {setCurrencyData(res.data);
   }).catch(error => console.log(error))
 }, []);
 
