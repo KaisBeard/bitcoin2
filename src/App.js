@@ -1,6 +1,7 @@
 import './App.css';
 import React from "react";
-import {useState} from "react";
+import {useState, useEffect} from "react";
+import axios from "axios";
 
 function App() {
   const [coins, setCoins] = useState ([])
@@ -16,7 +17,7 @@ useEffect(() => {
   return (
     <div className="App">
       <header className="App-header">
-        
+        hallo
       </header>
 
     </div>
