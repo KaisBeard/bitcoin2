@@ -25,11 +25,6 @@ function App() {
     coin.name.toLowerCase().includes(search.toLowerCase())
     )
 
-<<<<<<< HEAD
-  
-
-=======
->>>>>>> 8b920c0eabc717a965ef74373e40e66d40ce5d4c
   return (
     <div>
       <div className="App">
