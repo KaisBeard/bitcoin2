@@ -1,0 +1,28 @@
+.gridParent {
+  display: flex;
+  flex-direction: row;
+  /*rid-template-columns: 1fr, 1fr, 1fr, 1fr;
+  grid-template-rows: auto; */
+  margin: 1em, 20%;
+  padding-bottom: 2em;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgb(81, 18, 129);
+}
+
+h2 {
+  text-align: center;
+}
+
+.gridparent * {
+  background-color: rgb(81, 18, 129);
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
